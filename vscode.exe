@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+	class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-light"
+	lang="en-us"
+	dir="ltr"
+	data-authenticated="false"
+	data-auth-status-determined="false"
+	data-target="docs"
+	x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="Get started with Azure Cloud Services (classic) and ASP.NET" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://learn.microsoft.com/en-us/azure/cloud-services/cloud-services-dotnet-get-started" />
+			<meta property="og:description" content="Learn how to create a multi-tier app using ASP.NET MVC and Azure. The app runs in a cloud service, with web role and worker role. It uses Entity Framework, SQL Database, and Azure Storage queues and blobs." />
+
+	<meta property="og:image" content="https://learn.microsoft.com/en-us/media/open-graph-image.png" />
+
+	<meta property="og:image:alt" content="Microsoft Learn" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+
+	<meta name="twitter:site" content="@MicrosoftLearn" />
+
+	<meta name="color-scheme" content="light dark">
+
+
+	<meta name="author" content="hirenshah1" />
+<meta name="breadcrumb_path" content="/azure/bread/toc.json" />
+<meta name="depot_name" content="Azure.azure-documents" />
+<meta name="description" content="Learn how to create a multi-tier app using ASP.NET MVC and Azure. The app runs in a cloud service, with web role and worker role. It uses Entity Framework, SQL Database, and Azure Storage queues and blobs." />
+<meta name="document_id" content="8cc8f1b2-fa7a-6772-e534-9f91b37106e7" />
+<meta name="document_version_independent_id" content="e9309449-36ab-f570-8d04-121b1158a507" />
+<meta name="feedback_help_link_type" content="" />
+<meta name="feedback_help_link_url" content="" />
+<meta name="feedback_product_url" content="https://feedback.azure.com/d365community/forum/a80be93d-0d25-ec11-b6e6-000d3a4f07b8" />
+<meta name="feedback_system" content="GitHub" />
+<meta name="git_commit_id" content="a82e4f4977fdef6b94fac6acf28faa87de07c2e7" />
+<meta name="gitcommit" content="https://github.com/MicrosoftDocs/azure-docs-pr/blob/a82e4f4977fdef6b94fac6acf28faa87de07c2e7/articles/cloud-services/cloud-services-dotnet-get-started.md" />
+<meta name="learn_banner_products" content="azure" />
+<meta name="locale" content="en-us" />
+<meta name="ms.author" content="hirshah" />
+<meta name="ms.custom" content="compute-evergreen, devx-track-dotnet" />
+<meta name="ms.date" content="02/21/2023" />
+<meta name="ms.reviewer" content="mimckitt" />
+<meta name="ms.service" content="cloud-services" />
+<meta name="ms.suite" content="office" />
+<meta name="ms.topic" content="article" />
+<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/azure-docs-pr/blob/live/articles/cloud-services/cloud-services-dotnet-get-started.md" />
+<meta name="page_type" content="conceptual" />
+<meta name="pdf_url_template" content="https://learn.microsoft.com/pdfstore/en-us/Azure.azure-documents/{branchName}{pdfName}" />
+<meta name="recommendation_types" content="Training" />
+<meta name="recommendation_types" content="Certification" />
+<meta name="recommendations" content="true" />
+<meta name="schema" content="Conceptual" />
+<meta name="site_name" content="Docs" />
+<meta name="toc_rel" content="toc.json" />
+<meta name="uhfHeaderId" content="azure" />
+<meta name="updated_at" content="2023-06-01 10:06 PM" />
+<meta name="word_count" content="5957" />
+
+
+	<meta name="persistent_id" content="ec3b93c2-fa53-e232-5b68-86debda41396" />
+	
+
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/486161dc-fa28-4625-9b1c-1a21d690bc8d" data-source="generated" />
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d" data-source="generated" />
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/4628cbd9-6f47-4ae1-b371-d34636609eaf" data-source="generated" />
+
+	
+
+
+	<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/5dd28c86-729c-4723-ab5a-57e26fcec2a8" data-source="generated" />
+
+	<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/90370425-aca4-4a39-9533-d52e5e002a5d" data-source="generated" />
+
+	<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/be21deb8-8c64-44b0-b71f-2dc56ca7364f" data-source="generated" />
+
+	
+
+
+	<meta name="scope" content="Azure" />
+	<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/cloud-services/cloud-services-dotnet-get-started.md" />
+<link href="https://learn.microsoft.com/en-us/azure/cloud-services/cloud-services-dotnet-get-started" rel="canonical">
+	<title>Get started with Azure Cloud Services (classic) and ASP.NET | Microsoft Learn</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/9b5f3dea.site-ltr.css ">
+
+	
+
+	<script id="msdocs-script">
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: 'azure',
+			context: {
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: true,
+			feedbackHelpLinkType:'',
+			feedbackHelpLinkUrl:'',
+			standardFeedback: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			contentWellNotification: '',
+			feedbackSystem: 'GitHub',
+			feedbackGitHubRepo: 'MicrosoftDocs/azure-docs',
+			feedbackProductUrl: 'https://feedback.azure.com/d365community/forum/a80be93d-0d25-ec11-b6e6-000d3a4f07b8',
+			extendBreadcrumb: false,
+			isEditDisplayable: true,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasPrintButton: true,
+			hasBookmark: true,
+			hasShare: true,
+			isPermissioned: false,
+			isPrivateUnauthorized: false,
+			hasRecommendations: true,
+			contributors: [
+						{ name: "hirenshah1", url: "https://github.com/hirenshah1" },
+						{ name: "cynthn", url: "https://github.com/cynthn" },
+						{ name: "pritamso", url: "https://github.com/pritamso" },
+						{ name: "cmcclister", url: "https://github.com/cmcclister" },
+						{ name: "v-rajagt", url: "https://github.com/v-rajagt" },
+						{ name: "v-hearya", url: "https://github.com/v-hearya" },
+						{ name: "mimckitt", url: "https://github.com/mimckitt" },
+						{ name: "v-alje", url: "https://github.com/v-alje" },
+						{ name: "hyoshioka0128", url: "https://github.com/hyoshioka0128" },
+						{ name: "damabe", url: "https://github.com/damabe" },
+						{ name: "DCtheGeek", url: "https://github.com/DCtheGeek" },
+						{ name: "wadepickett", url: "https://github.com/wadepickett" },
+						{ name: "CarlRabeler", url: "https://github.com/CarlRabeler" },
+						{ name: "v-kents", url: "https://github.com/v-kents" },
+						{ name: "rachrobins", url: "https://github.com/rachrobins" },
+						{ name: "cephalin", url: "https://github.com/cephalin" },
+						{ name: "nxtn", url: "https://github.com/nxtn" },
+						{ name: "MarkMcGee1", url: "https://github.com/MarkMcGee1" },
+						{ name: "nschonni", url: "https://github.com/nschonni" },
+						{ name: "adegeo", url: "https://github.com/adegeo" },
+						{ name: "SychevIgor", url: "https://github.com/SychevIgor" },
+						{ name: "LizCasey", url: "https://github.com/LizCasey" },
+						{ name: "tompratt-AQ", url: "https://github.com/tompratt-AQ" },
+						{ name: "v-ribi", url: "https://github.com/v-ribi" },
+						{ name: "obsoleted", url: "https://github.com/obsoleted" },
+						{ name: "tynevi", url: "https://github.com/tynevi" },
+						{ name: "cjgronlund", url: "https://github.com/cjgronlund" },
+						{ name: "tdykstra", url: "https://github.com/tdykstra" },
+						{ name: "MattLaBelle", url: "https://github.com/MattLaBelle" }
+],
+		},
+		functions:{}
+	};
+	</script>
+	<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+	<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-3.min.js"></script>
+
+	<script src="/_themes/docs.theme/master/en-us/_themes/global/67a45209.deprecation.js"></script>
+
+		<link rel="preconnect" href="//mscom.demdex.net" crossorigin>
+		<link rel="dns-prefetch" href="//target.microsoft.com">
+		<link rel="dns-prefetch" href="//microsoftmscompoc.tt.omtrdc.net">
+		<link
+			rel="preload"
+			as="script"
+			href="/static/third-party/adobe-target/at-js/2.9.0/at.js"
+			integrity="sha384-1/viVM50hgc33O2gOgkWz3EjiD/Fy/ld1dKYXJRUyjNYVEjSUGcSN+iPiQF7e4cu"
+			crossorigin="anonymous"
+			id="adobe-target-script"
+			type="application/javascript"
+		/>
+		<script src="/_themes/docs.theme/master/en-us/_themes/scripts/564f74b3.index-docs.js"></script>
+</head>
+
+<body lang="en-us" dir="ltr">
+	<div class="header-holder has-default-focus">
+		<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused position-fixed has-inner-focus focus-visible top-0 left-0 right-0 padding-xs has-text-centered has-body-background" tabindex="1">Skip to main content</a>
+
+		<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+
+		<div id="unsupported-browser" style="
+			background-color: white;
+			color: black;
+			padding: 16px;
+			border-bottom: 1px solid grey;"
+			hidden
+		>
+			<div style="max-width: 800px; margin: 0 auto;">
+				<p style="font-size: 24px">This browser is no longer supported.</p>
+				<p style="font-size: 16px; margin-top: 16px;">Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.</p>
+				<div style="margin-top: 12px;">
+					<a href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+						style="
+						background-color: #0078d4;
+						border: 1px solid #0078d4;
+						color: white;
+						padding: 6px 12px;
+						border-radius: 2px;
+						display: inline-block;
+						">
+Download Microsoft Edge					</a>
+					<a href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+						style="
+							background-color: white;
+							padding: 6px 12px;
+							border: 1px solid #505050;
+							color: #171717;
+							border-radius: 2px;
+							display: inline-block;
+							">
+More info about Internet Explorer and Microsoft Edge					</a>
+				</div>
+			</div>
+		</div>
+		<!-- liquid-tag banners global -->
+
+		<!-- site header -->
+		<header id="ms--site-header" class="display-none" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization"></header>
+
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+	<div id="ms--primary-nav" class="nav-bar">
+		<div class="nav-bar-brand">
+			<a itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" class="nav-bar-button">
+				<div class="nav-bar-logo has-background-image theme-display is-light" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+				<div class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+			</a>
+		</div>
+	</div>
+	<div id="ms--secondary-nav" class="nav-bar border-bottom is-hidden-mobile"></div>
+</header>
+		</div>
+
+
+			<div id="content-header" class="content-header uhf-container has-padding has-default-focus border-bottom-none" data-bi-name="content-header">
+				<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+					<button type="button" class="contents-button button button-sm margin-right-xxs" data-bi-name="contents-expand" aria-haspopup="true" data-contents-button>
+						<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+						<span class="contents-expand-title">
+Table of contents						</span>
+					</button>
+					<button type="button" class="ap-collapse-behavior ap-expanded button button-sm" data-bi-name="ap-collapse" aria-controls="action-panel">
+						<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+						<span>Exit focus mode</span>
+					</button>
+				</div>
+			</div>
+
+		<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus">
+			<!-- liquid-tag banners sectional -->
+		</div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="margin-top-sm-tablet position-sticky display-flex flex-direction-column" role="navigation" aria-label="Primary"></nav>
+			</div>
+
+			<!-- .primary-holder -->
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<!--div.columns -->
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+					<div id="main-column" class="column  is-full is-8-desktop">
+
+						<main id="main" class="" role="main" data-bi-name="content" lang="en-us" dir="ltr">
+							<!-- article-header -->
+							<div id="article-header" class="background-color-body margin-top-sm-tablet margin-bottom-xs display-none-print">
+								<div class="display-flex align-items-center ">
+									<details id="article-header-breadcrumbs-overflow-popover" class="popover" data-for="article-header-breadcrumbs">
+										<summary class="button button-clear button-primary button-sm inner-focus" aria-label="All breadcrumbs">
+											<span class="icon">
+												<span class="docon docon-more"></span>
+											</span>
+										</summary>
+										<div id="article-header-breadcrumbs-overflow" class="popover-content padding-none">
+
+										</div>
+									</details>
+
+									<bread-crumbs id="article-header-breadcrumbs" data-test-id="article-header-breadcrumbs" class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"></bread-crumbs>
+
+									<div id="article-header-page-actions"  class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch">
+
+										<a
+											id="lang-link-tablet"
+											class="button button-primary button-clear button-sm display-none display-inline-flex-tablet"
+											title="Read in English" data-bi-name="language-toggle"
+											data-read-in-link
+											hidden>
+											<span class="icon margin-none" aria-hidden="true" data-read-in-link-icon>
+												<span class="docon docon-locale-globe"></span>
+											</span>
+											<span class="is-visually-hidden" data-read-in-link-text>Read in English</span>
+										</a>
+
+											<button
+												type="button"
+												class="collection button button-clear button-sm button-primary display-none display-inline-flex-tablet"
+												data-list-type="collection"
+												data-bi-name="collection"
+												title="Add to collection">
+												<span class="icon margin-none" aria-hidden="true">
+													<span class="docon docon-circle-addition"></span>
+												</span>
+												<span class="collection-status is-visually-hidden">Save</span>
+											</button>
+										
+
+											<a	data-contenteditbtn
+												class="button button-clear button-sm text-decoration-none button-primary display-none display-inline-flex-tablet"
+												aria-label="Edit"
+												title="Edit This Document"
+												data-bi-name="edit"
+
+														href="https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/cloud-services/cloud-services-dotnet-get-started.md"
+														data-original_content_git_url="https://github.com/MicrosoftDocs/azure-docs-pr/blob/live/articles/cloud-services/cloud-services-dotnet-get-started.md"
+														data-original_content_git_url_template="{repo}/blob/{branch}/articles/cloud-services/cloud-services-dotnet-get-started.md"
+														data-pr_repo=""
+														data-pr_branch=""
+											>
+												<span class="icon margin-none" aria-hidden="true">
+													<span class="docon docon-edit-outline"></span>
+												</span>
+											</a>
+										
+
+
+										
+										<details class="popover popover-right" id="article-header-page-actions-overflow">
+											<summary class="justify-content-flex-start button button-clear button-sm button-primary" aria-label="More actions">
+												<span class="icon" aria-hidden="true">
+													<span class="docon docon-more-vertical"></span>
+												</span>
+											</summary>
+											<div class="popover-content padding-none">
+													<button
+														data-page-action-item="overflow-mobile"
+														type="button"
+														class="justify-content-flex-start button-block button-sm has-inner-focus button button-clear display-none-tablet"
+														data-bi-name="contents-expand"
+														data-contents-button
+														data-popover-close>
+														<span class="icon">
+															<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+														</span>
+															<span class="contents-expand-title">Table of contents</span>
+													</button>
+
+												<a
+													id="lang-link-overflow"
+													class="justify-content-flex-start button-sm has-inner-focus button button-clear button-block display-none-tablet"
+													title="Read in English" data-bi-name="language-toggle"
+													data-page-action-item="overflow-mobile"
+													data-check-hidden="true"
+													data-read-in-link
+													hidden
+													>
+													<span class="icon" aria-hidden="true" data-read-in-link-icon>
+														<span class="docon docon-locale-globe"></span>
+													</span>
+													<span data-read-in-link-text>Read in English</span>
+												</a>
+
+													<button
+														type="button"
+														class="collection justify-content-flex-start button button-clear button-sm has-inner-focus button-block display-none-tablet"
+														data-list-type="collection"
+														data-bi-name="collection"
+														title="Add to collection"
+														data-page-action-item="overflow-mobile"
+														data-check-hidden="true"
+														data-popover-close>
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-circle-addition"></span>
+														</span>
+														<span class="collection-status">Save</span>
+													</button>
+
+													<a	data-contenteditbtn
+														class="button button-clear button-block button-sm has-inner-focus justify-content-flex-start text-decoration-none display-none-tablet"
+														aria-label="Edit"
+														title="Edit This Document"
+														data-bi-name="edit"
+
+																href="https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/cloud-services/cloud-services-dotnet-get-started.md"
+																data-original_content_git_url="https://github.com/MicrosoftDocs/azure-docs-pr/blob/live/articles/cloud-services/cloud-services-dotnet-get-started.md"
+																data-original_content_git_url_template="{repo}/blob/{branch}/articles/cloud-services/cloud-services-dotnet-get-started.md"
+																data-pr_repo=""
+																data-pr_branch=""
+													>
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-edit-outline"></span>
+														</span>
+														<span>Edit</span>
+													</a>
+
+													<button
+														class="button button-block button-clear button-sm justify-content-flex-start has-inner-focus"
+														title="Print"
+														type="button"
+														aria-label="Print"
+														data-bi-name="print"
+														data-page-action-item="overflow-all"
+														data-popover-close
+														data-print-page
+														data-check-hidden="true">
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-print"></span>
+														</span>
+														<span>Print</span>
+													</button>
+
+													<div aria-hidden="true" class="margin-none
+														border-top" data-page-action-item="overflow-all"></div>
+
+													
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-twitter" data-bi-name="twitter" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-twitter"></span>
+															</span>
+															<span>Twitter</span>
+														</a>
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-linkedin" data-bi-name="linkedin" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-linkedin"></span>
+															</span>
+															<span>LinkedIn</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-facebook" data-bi-name="facebook" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-facebook"></span>
+															</span>
+															<span>Facebook</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-email" data-bi-name="email" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-mail-message-fill"></span>
+															</span>
+															<span>Email</span>
+														</a>
+												
+											</div>
+										</details>
+										
+									</div>
+								</div>
+							</div>
+							<!-- end article-header -->
+
+
+							<div>
+								<button type="button" class="border contents-button button button-clear button-sm is-hidden-tablet has-inner-focus" data-bi-name="contents-expand" data-contents-button hidden>
+									<span class="icon">
+										<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+									</span>
+										<span class="contents-expand-title">Table of contents</span>
+								</button>
+							</div>
+
+							<!-- end mobile-contents button  -->
+
+							<div class="content ">
+
+
+								<h1 id="get-started-with-azure-cloud-services-classic-and-aspnet">Get started with Azure Cloud Services (classic) and ASP.NET</h1>
+
+
+									<div class="display-flex justify-content-space-between align-items-center flex-wrap-wrap page-metadata-container">
+										<div class="margin-right-xxs">
+											<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+													<li>
+Article													</li>
+
+													<li class="visibility-hidden-visual-diff">
+														<time class="is-invisible" data-article-date aria-label="Article review date" datetime="2023-02-21T23:05:00Z" data-article-date-source="calculated">02/21/2023</time>
+													</li>
+														<li class="contributors-holder display-none-print">
+															<button aria-label="View all contributors" class="contributors-button link-button" data-bi-name="contributors" title="View all contributors">
+																	29 contributors
+															</button>
+														</li>
+											</ul>
+										</div>
+
+<div id="user-feedback" class="margin-block-xxs display-none-print" data-hide-on-archived>
+	<button
+		id="user-feedback-button"
+		data-test-id="conceptual-feedback-button"
+		class="button button-sm button-clear button-primary"
+		type="button"
+		data-bi-name="user-feedback-button"
+		data-user-feedback-button
+	>
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-like"></span>
+		</span>
+		<span>Feedback</span>
+	</button>
+</div>
+									</div>
+
+									<div id="ms--inline-notifications" data-bi-name="inline-notification"></div>
+
+										<nav id="center-doc-outline" class="doc-outline is-hidden-desktop display-none-print margin-bottom-sm" data-bi-name="intopic toc" role="navigation" aria-label="In this article">
+											<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">In this article</h2>
+										</nav>
+
+								<!-- <content> -->
+									<h2 id="overview">Overview</h2>
+<div class="IMPORTANT">
+<p>Important</p>
+<p><a href="https://azure.microsoft.com/updates/cloud-services-retirement-announcement/" data-linktype="external">Cloud Services (classic) is now deprecated</a> for new customers and will be retired on August 31st, 2024 for all customers. New deployments should use the new Azure Resource Manager based deployment model <strong><a href="../cloud-services-extended-support/overview" data-linktype="relative-path">Azure Cloud Services (extended support)</a></strong>.</p>
+</div>
+<p>This tutorial shows how to create a multi-tier .NET application with an ASP.NET MVC front-end, and deploy it to an <a href="cloud-services-choose-me" data-linktype="relative-path">Azure cloud service</a>. The application uses <a href="/en-us/previous-versions/azure/ee336279(v=azure.100)" data-linktype="absolute-path">Azure SQL Database</a>, the <a href="https://www.asp.net/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/unstructured-blob-storage" data-linktype="external">Azure Blob service</a>, and the <a href="https://www.asp.net/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/queue-centric-work-pattern" data-linktype="external">Azure Queue service</a>. You can <a href="https://code.msdn.microsoft.com/Simple-Azure-Cloud-Service-e01df2e4" data-linktype="external">download the Visual Studio project</a> from the MSDN Code Gallery.</p>
+<p>The tutorial shows you how to build and run the application locally, how to deploy it to Azure and run in the cloud, and how to build it from scratch. You can start by building from scratch and then do the test and deploy steps afterward if you prefer.</p>
+<h2 id="contoso-ads-application">Contoso Ads application</h2>
+<p>The application is an advertising bulletin board. Users create an ad by entering text and uploading an image. They can see a list of ads with thumbnail images, and they can see the full-size image when they select an ad to see the details.</p>
+<p><img src="media/cloud-services-dotnet-get-started/list.png" alt="Image shows Ad list" data-linktype="relative-path"/></p>
+<p>The application uses the <a href="https://www.asp.net/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/queue-centric-work-pattern" data-linktype="external">queue-centric work pattern</a> to off-load the CPU-intensive work of creating thumbnails to a back-end process.</p>
+<h2 id="alternative-architecture-app-service-and-webjobs">Alternative architecture: App Service and WebJobs</h2>
+<p>This tutorial shows how to run both front-end and back-end in an Azure cloud service. An alternative is to run the front-end in <a href="../app-service/" data-linktype="relative-path">Azure App Service</a> and use the <a href="../app-service/webjobs-create" data-linktype="relative-path">WebJobs</a> feature for the back-end. For a tutorial that uses WebJobs, see <a href="https://github.com/Azure/azure-webjobs-sdk/wiki" data-linktype="external">Get Started with the Azure WebJobs SDK</a>. For information about how to choose the services that best fit your scenario, see <a href="/en-us/azure/architecture/guide/technology-choices/compute-decision-tree" data-linktype="absolute-path">Azure App Service, Cloud Services, and virtual machines comparison</a>.</p>
+<h2 id="what-youll-learn">What you'll learn</h2>
+<ul>
+<li>How to enable your machine for Azure development by installing the Azure SDK.</li>
+<li>How to create a Visual Studio cloud service project with an ASP.NET MVC web role and a worker role.</li>
+<li>How to test the cloud service project locally, using the Azure Storage Emulator.</li>
+<li>How to publish the cloud project to an Azure cloud service and test using an Azure storage account.</li>
+<li>How to upload files and store them in the Azure Blob service.</li>
+<li>How to use the Azure Queue service for communication between tiers.</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>The tutorial assumes that you understand <a href="cloud-services-choose-me" data-linktype="relative-path">basic concepts about Azure cloud services</a> such as <em>web role</em> and <em>worker role</em> terminology.  It also assumes that you know how to work with <a href="https://www.asp.net/mvc/tutorials/mvc-5/introduction/getting-started" data-linktype="external">ASP.NET MVC</a> or <a href="https://www.asp.net/web-forms/tutorials/aspnet-45/getting-started-with-aspnet-45-web-forms/introduction-and-overview" data-linktype="external">Web Forms</a> projects in Visual Studio. The sample application uses MVC, but most of the tutorial also applies to Web Forms.</p>
+<p>You can run the app locally without an Azure subscription, but you'll need one to deploy the application to the cloud. If you don't have an account, you can <a href="https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/?WT.mc_id=A55E3C668" data-linktype="external">activate your MSDN subscriber benefits</a> or <a href="https://azure.microsoft.com/pricing/free-trial/?WT.mc_id=A55E3C668" data-linktype="external">sign up for a free trial</a>.</p>
+<p>The tutorial instructions work with any of the following products:</p>
+<ul>
+<li>Visual Studio 2013</li>
+<li>Visual Studio 2015</li>
+<li>Visual Studio 2017</li>
+<li>Visual Studio 2019</li>
+</ul>
+<p>If you don't have one of these, Visual Studio may be installed automatically when you install the Azure SDK.</p>
+<h2 id="application-architecture">Application architecture</h2>
+<p>The app stores ads in a SQL database, using Entity Framework Code First to create the tables and access the data. For each ad, the database stores two URLs, one for the full-size image and one for the thumbnail.</p>
+<p><img src="media/cloud-services-dotnet-get-started/adtable.png" alt="This is an image of an Ad table" data-linktype="relative-path"/></p>
+<p>When a user uploads an image, the front-end running in a web role stores the image in an <a href="https://www.asp.net/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/unstructured-blob-storage" data-linktype="external">Azure blob</a>, and it stores the ad information in the database with a URL that points to the blob. At the same time, it writes a message to an Azure queue. A back-end process running in a worker role periodically polls the queue for new messages. When a new message appears, the worker role creates a thumbnail for that image and updates the thumbnail URL database field for that ad. The following diagram shows how the parts of the application interact.</p>
+<p><img src="media/cloud-services-dotnet-get-started/apparchitecture.png" alt="Diagram that shows how the parts of the application interact." data-linktype="relative-path"/></p>
+<h2 id="setupdevenv">Set up the development environment</h2>
+<p>To start, set up your development environment with Visual Studio and the Azure SDK.</p>
+<ul>
+<li><p>Visual Studio 2019 includes the Azure SDK. If you're using Visual Studio 2019, no additional setup is needed for the development environment.</p>
+</li>
+<li><p>For Visual Studio 2015, click the following link to install the <a href="https://go.microsoft.com/fwlink/?linkid=518003" data-linktype="external">Azure SDK for Visual Studio 2015</a>.</p>
+</li>
+<li><p>For Visual Studio 2013, click the following link to install the <a href="https://go.microsoft.com/fwlink/?LinkID=324322" data-linktype="external">Azure SDK for Visual Studio 2013</a>.</p>
+</li>
+<li><p>If you don't have Visual Studio installed, use the following to install <a href="https://www.visualstudio.com/" data-linktype="external">Visual Studio 2019</a> with the Azure SDK.</p>
+</li>
+</ul>
+<div class="NOTE">
+<p>Note</p>
+<p>Depending on the number of the SDK dependencies already on your machine, installing the SDK could take a long time, from several minutes to a half hour or more.</p>
+</div>
+<h2 id="download-and-run-the-completed-solution">Download and run the completed solution</h2>
+<ol>
+<li><p>Download and unzip the <a href="https://code.msdn.microsoft.com/Simple-Azure-Cloud-Service-e01df2e4" data-linktype="external">completed solution</a>.</p>
+</li>
+<li><p>Start Visual Studio.</p>
+</li>
+<li><p>From the <strong>File</strong> menu choose <strong>Open Project</strong>, navigate to where you downloaded the solution, and then open the solution file.</p>
+</li>
+<li><p>Press CTRL+SHIFT+B to build the solution.</p>
+<p>By default, Visual Studio automatically restores the NuGet package content, which was not included in the <em>.zip</em> file. If the packages don't restore, install them manually by going to the <strong>Manage NuGet Packages for Solution</strong> dialog box and clicking the <strong>Restore</strong> button at the top right.</p>
+</li>
+<li><p>In <strong>Solution Explorer</strong>, make sure that <strong>ContosoAdsCloudService</strong> is selected as the startup project.</p>
+</li>
+<li><p>If you're using Visual Studio 2015 or higher, change the SQL Server connection string in the application <em>Web.config</em> file of the ContosoAdsWeb project and in the <em>ServiceConfiguration.Local.cscfg</em> file of the ContosoAdsCloudService project. In each case, change &quot;(localdb)\v11.0&quot; to &quot;(localdb)\MSSQLLocalDB&quot;.</p>
+</li>
+<li><p>Press CTRL+F5 to run the application.</p>
+<p>When you run a cloud service project locally, Visual Studio automatically invokes the Azure <em>compute emulator</em> and Azure <em>storage emulator</em>. The compute emulator uses your computer's resources to simulate the web role and worker role environments. The storage emulator uses a <a href="/en-us/sql/database-engine/configure-windows/sql-server-2016-express-localdb" data-linktype="absolute-path">SQL Server Express LocalDB</a> database to simulate Azure cloud storage.</p>
+<p>The first time you run a cloud service project, it takes a minute or so for the emulators to start up. When emulator startup is finished, the default browser opens to the application home page.</p>
+<p><img src="media/cloud-services-dotnet-get-started/home.png" alt="Contoso Ads architecture 1" data-linktype="relative-path"/></p>
+</li>
+<li><p>Click  <strong>Create an Ad</strong>.</p>
+</li>
+<li><p>Enter some test data and select a <em>.jpg</em> image to upload, and then click <strong>Create</strong>.</p>
+<p><img src="media/cloud-services-dotnet-get-started/create.png" alt="Image shows Create page" data-linktype="relative-path"/></p>
+<p>The app goes to the Index page, but it doesn't show a thumbnail for the new ad because that processing hasn't happened yet.</p>
+</li>
+<li><p>Wait a moment and then refresh the Index page to see the thumbnail.</p>
+<p><img src="media/cloud-services-dotnet-get-started/list.png" alt="Index page" data-linktype="relative-path"/></p>
+</li>
+<li><p>Click <strong>Details</strong> for your ad to see the full-size image.</p>
+<p><img src="media/cloud-services-dotnet-get-started/details.png" alt="Details page" data-linktype="relative-path"/></p>
+</li>
+</ol>
+<p>You've been running the application entirely on your local computer, with no connection to the cloud. The storage emulator stores the queue and blob data in a SQL Server Express LocalDB database, and the application stores the ad data in another LocalDB database. Entity Framework Code First automatically created the ad database the first time the web app tried to access it.</p>
+<p>In the following section you'll configure the solution to use Azure cloud resources for queues, blobs, and the application database when it runs in the cloud. If you wanted to continue to run locally but use cloud storage and database resources, you could do that. It's just a matter of setting connection strings, which you'll see how to do.</p>
+<h2 id="deploy-the-application-to-azure">Deploy the application to Azure</h2>
+<p>You'll do the following steps to run the application in the cloud:</p>
+<ul>
+<li>Create an Azure cloud service.</li>
+<li>Create a database in Azure SQL Database.</li>
+<li>Create an Azure storage account.</li>
+<li>Configure the solution to use your database when it runs in Azure.</li>
+<li>Configure the solution to use your Azure storage account when it runs in Azure.</li>
+<li>Deploy the project to your Azure cloud service.</li>
+</ul>
+<h3 id="create-an-azure-cloud-service">Create an Azure cloud service</h3>
+<p>An Azure cloud service is the environment the application will run in.</p>
+<ol>
+<li><p>In your browser, open the <a href="https://portal.azure.com" data-linktype="external">Azure portal</a>.</p>
+</li>
+<li><p>Click <strong>Create a resource &gt; Compute &gt; Cloud Service</strong>.</p>
+</li>
+<li><p>In the DNS name input box, enter a URL prefix for the cloud service.</p>
+<p>This URL has to be unique.  You'll get an error message if the prefix you choose is already in use.</p>
+</li>
+<li><p>Specify a new Resource group for the  service. Click <strong>Create new</strong> and then type a name in the Resource group input box, such as CS_contososadsRG.</p>
+</li>
+<li><p>Choose the region where you want to deploy the application.</p>
+<p>This field specifies which datacenter your cloud service will be hosted in. For a production application, you'd choose the region closest to your customers. For this tutorial, choose the region closest to you.</p>
+</li>
+<li><p>Click <strong>Create</strong>.</p>
+<p>In the following image, a cloud service is created with the URL CSvccontosoads.cloudapp.net.</p>
+<p><img src="media/cloud-services-dotnet-get-started/newcs.png" alt="Image shows New Cloud Service" data-linktype="relative-path"/></p>
+</li>
+</ol>
+<h3 id="create-a-database-in-azure-sql-database">Create a database in Azure SQL Database</h3>
+<p>When the app runs in the cloud, it will use a cloud-based database.</p>
+<ol>
+<li><p>In the <a href="https://portal.azure.com" data-linktype="external">Azure portal</a>, click <strong>Create a resource &gt; Databases &gt; SQL Database</strong>.</p>
+</li>
+<li><p>In the <strong>Database Name</strong> box, enter <em>contosoads</em>.</p>
+</li>
+<li><p>In the <strong>Resource group</strong>, click <strong>Use existing</strong> and select the resource group used for the cloud service.</p>
+</li>
+<li><p>In the following image, click <strong>Server - Configure required settings</strong> and <strong>Create a new server</strong>.</p>
+<p><img src="media/cloud-services-dotnet-get-started/newdb.png" alt="Tunnel to database server" data-linktype="relative-path"/></p>
+<p>Alternatively, if your subscription already has a server, you can select that server from the drop-down list.</p>
+</li>
+<li><p>In the <strong>Server name</strong> box, enter <em>csvccontosodbserver</em>.</p>
+</li>
+<li><p>Enter an administrator <strong>Login Name</strong> and <strong>Password</strong>.</p>
+<p>If you selected <strong>Create a new server</strong>, you aren't entering an existing name and password here. You're entering a new name and password that you're defining now to use later when you access the database. If you selected a server that you created previously, you'll be prompted for the password to the administrative user account you already created.</p>
+</li>
+<li><p>Choose the same <strong>Location</strong> that you chose for the cloud service.</p>
+<p>When the cloud service and database are in different datacenters (different regions), latency will increase and you will be charged for bandwidth outside the data center. Bandwidth within a data center is free.</p>
+</li>
+<li><p>Check <strong>Allow azure services to access server</strong>.</p>
+</li>
+<li><p>Click <strong>Select</strong> for the new server.</p>
+<p><img src="media/cloud-services-dotnet-get-started/newdbserver.png" alt="New server" data-linktype="relative-path"/></p>
+</li>
+<li><p>Click <strong>Create</strong>.</p>
+</li>
+</ol>
+<h3 id="create-an-azure-storage-account">Create an Azure storage account</h3>
+<p>An Azure storage account provides resources for storing queue and blob data in the cloud.</p>
+<p>In a real-world application, you would typically create separate accounts for application data versus logging data, and separate accounts for test data versus production data. For this tutorial, you'll use just one account.</p>
+<ol>
+<li><p>In the <a href="https://portal.azure.com" data-linktype="external">Azure portal</a>, click <strong>Create a resource &gt; Storage &gt; Storage account - blob, file, table, queue</strong>.</p>
+</li>
+<li><p>In the <strong>Name</strong> box, enter a URL prefix.</p>
+<p>This prefix plus the text you see under the box will be the unique URL to your storage account. If the prefix you enter has already been used by someone else, you'll have to choose a different prefix.</p>
+</li>
+<li><p>Set the <strong>Deployment model</strong> to <em>Classic</em>.</p>
+</li>
+<li><p>Set the <strong>Replication</strong> drop-down list to <strong>Locally redundant storage</strong>.</p>
+<p>When geo-replication is enabled for a storage account, the stored content is replicated to a secondary datacenter to enable failover if a major disaster occurs in the primary location. Geo-replication can incur additional costs. For test and development accounts, you generally don't want to pay for geo-replication. For more information, see <a href="../storage/common/storage-account-create" data-linktype="relative-path">Create, manage, or delete a storage account</a>.</p>
+</li>
+<li><p>In the <strong>Resource group</strong>, click <strong>Use existing</strong> and select the resource group used for the cloud service.</p>
+</li>
+<li><p>Set the <strong>Location</strong> drop-down list to the same region you chose for the cloud service.</p>
+<p>When the cloud service and storage account are in different datacenters (different regions), latency will increase and you will be charged for bandwidth outside the data center. Bandwidth within a data center is free.</p>
+<p>Azure affinity groups provide a mechanism to minimize the distance between resources in a data center, which can reduce latency. This tutorial does not use affinity groups. For more information, see <a href="/en-us/previous-versions/azure/reference/gg715317(v=azure.100)" data-linktype="absolute-path">How to Create an Affinity Group in Azure</a>.</p>
+</li>
+<li><p>Click <strong>Create</strong>.</p>
+<p><img src="media/cloud-services-dotnet-get-started/newstorage.png" alt="New storage account" data-linktype="relative-path"/></p>
+<p>In the image, a storage account is created with the URL <code>csvccontosoads.core.windows.net</code>.</p>
+</li>
+</ol>
+<h3 id="configure-the-solution-to-use-your-database-in-azure-sql-database-when-it-runs-in-azure">Configure the solution to use your database in Azure SQL Database when it runs in Azure</h3>
+<p>The web project and the worker role project each has its own database connection string, and each needs to point to the database in Azure SQL Database when the app runs in Azure.</p>
+<p>You'll use a <a href="https://www.asp.net/mvc/tutorials/deployment/visual-studio-web-deployment/web-config-transformations" data-linktype="external">Web.config transform</a> for the web role and a cloud service environment setting for the worker role.</p>
+<div class="NOTE">
+<p>Note</p>
+<p>In this section and the next section, you store credentials in project files. <a href="https://www.asp.net/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control#secrets" data-linktype="external">Don't store sensitive data in public source code repositories</a>.</p>
+</div>
+<ol>
+<li><p>In the ContosoAdsWeb project, open the <em>Web.Release.config</em> transform file for the application <em>Web.config</em> file, delete the comment block that contains a <code>&lt;connectionStrings&gt;</code> element, and paste the following code in its place.</p>
+<pre><code class="lang-xml">&lt;connectionStrings&gt;
+    &lt;add name=&quot;ContosoAdsContext&quot; connectionString=&quot;{connectionstring}&quot;
+    providerName=&quot;System.Data.SqlClient&quot; xdt:Transform=&quot;SetAttributes&quot; xdt:Locator=&quot;Match(name)&quot;/&gt;
+&lt;/connectionStrings&gt;
+</code></pre>
+<p>Leave the file open for editing.</p>
+</li>
+<li><p>In the <a href="https://portal.azure.com" data-linktype="external">Azure portal</a>, click <strong>SQL Databases</strong> in the left pane, click the database you created for this tutorial, and then click <strong>Show connection strings</strong>.</p>
+<p><img src="media/cloud-services-dotnet-get-started/showcs.png" alt="Show connection strings" data-linktype="relative-path"/></p>
+<p>The portal displays connection strings, with a placeholder for the password.</p>
+<p><img src="media/cloud-services-dotnet-get-started/connstrings.png" alt="Connection strings" data-linktype="relative-path"/></p>
+</li>
+<li><p>In the <em>Web.Release.config</em> transform file, delete <code>{connectionstring}</code> and paste in its place the ADO.NET connection string from the Azure portal.</p>
+</li>
+<li><p>In the connection string that you pasted into the <em>Web.Release.config</em> transform file, replace <code>{your_password_here}</code> with the password you created for the new SQL database.</p>
+</li>
+<li><p>Save the file.</p>
+</li>
+<li><p>Select and copy the connection string (without the surrounding quotation marks) for use in the following steps for configuring the worker role project.</p>
+</li>
+<li><p>In <strong>Solution Explorer</strong>, under <strong>Roles</strong> in the cloud service project, right-click <strong>ContosoAdsWorker</strong> and then click <strong>Properties</strong>.</p>
+<p><img src="media/cloud-services-dotnet-get-started/rolepropertiesworker.png" alt="Screenshot that highlights the Properties menu option." data-linktype="relative-path"/></p>
+</li>
+<li><p>Click the <strong>Settings</strong> tab.</p>
+</li>
+<li><p>Change <strong>Service Configuration</strong> to <strong>Cloud</strong>.</p>
+</li>
+<li><p>Select the <strong>Value</strong> field for the <code>ContosoAdsDbConnectionString</code> setting, and then paste the connection string that you copied from the previous section of the tutorial.</p>
+<p><img src="media/cloud-services-dotnet-get-started/workerdbcs.png" alt="Database connection string for worker role" data-linktype="relative-path"/></p>
+</li>
+<li><p>Save your changes.</p>
+</li>
+</ol>
+<h3 id="configure-the-solution-to-use-your-azure-storage-account-when-it-runs-in-azure">Configure the solution to use your Azure storage account when it runs in Azure</h3>
+<p>Azure storage account connection strings for both the web role project and the worker role project are stored in environment settings in the cloud service project. For each project, there is a separate set of settings to be used when the application runs locally and when it runs in the cloud. You'll update the cloud environment settings for both web and worker role projects.</p>
+<ol>
+<li><p>In <strong>Solution Explorer</strong>, right-click <strong>ContosoAdsWeb</strong> under <strong>Roles</strong> in the <strong>ContosoAdsCloudService</strong> project, and then click <strong>Properties</strong>.</p>
+<p><img src="media/cloud-services-dotnet-get-started/roleproperties.png" alt="Image shows Role properties" data-linktype="relative-path"/></p>
+</li>
+<li><p>Click the <strong>Settings</strong> tab. In the <strong>Service Configuration</strong> drop-down box, choose <strong>Cloud</strong>.</p>
+<p><img src="media/cloud-services-dotnet-get-started/sccloud.png" alt="Cloud configuration" data-linktype="relative-path"/></p>
+</li>
+<li><p>Select the <strong>StorageConnectionString</strong> entry, and you'll see an ellipsis (<strong>...</strong>) button at the right end of the line. Click the ellipsis button to open the <strong>Create Storage Account Connection String</strong> dialog box.</p>
+<p><img src="media/cloud-services-dotnet-get-started/opencscreate.png" alt="Open Connection String Create box" data-linktype="relative-path"/></p>
+</li>
+<li><p>In the <strong>Create Storage Connection String</strong> dialog box, click <strong>Your subscription</strong>, choose the storage account that you created earlier, and then click <strong>OK</strong>. If you're not already logged in, you'll be prompted for your Azure account credentials.</p>
+<p><img src="media/cloud-services-dotnet-get-started/createstoragecs.png" alt="Create Storage Connection String" data-linktype="relative-path"/></p>
+</li>
+<li><p>Save your changes.</p>
+</li>
+<li><p>Follow the same procedure that you used for the <code>StorageConnectionString</code> connection string to set the <code>Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString</code> connection string.</p>
+<p>This connection string is used for logging.</p>
+</li>
+<li><p>Follow the same procedure that you used for the <strong>ContosoAdsWeb</strong> role to set both connection strings for the <strong>ContosoAdsWorker</strong> role. Don't forget to set <strong>Service Configuration</strong> to <strong>Cloud</strong>.</p>
+</li>
+</ol>
+<p>The role environment settings that you have configured using the Visual Studio UI are stored in the following files in the ContosoAdsCloudService project:</p>
+<ul>
+<li><em>ServiceDefinition.csdef</em> - Defines the setting names.</li>
+<li><em>ServiceConfiguration.Cloud.cscfg</em> - Provides values for when the app runs in the cloud.</li>
+<li><em>ServiceConfiguration.Local.cscfg</em> - Provides values for when the app runs locally.</li>
+</ul>
+<p>For example, the ServiceDefinition.csdef includes the following definitions:</p>
+<pre><code class="lang-xml">&lt;ConfigurationSettings&gt;
+    &lt;Setting name=&quot;StorageConnectionString&quot; /&gt;
+    &lt;Setting name=&quot;ContosoAdsDbConnectionString&quot; /&gt;
+&lt;/ConfigurationSettings&gt;
+</code></pre>
+<p>And the <em>ServiceConfiguration.Cloud.cscfg</em> file includes the values you entered for those settings in Visual Studio.</p>
+<pre><code class="lang-xml">&lt;Role name=&quot;ContosoAdsWorker&quot;&gt;
+    &lt;Instances count=&quot;1&quot; /&gt;
+    &lt;ConfigurationSettings&gt;
+        &lt;Setting name=&quot;StorageConnectionString&quot; value=&quot;{yourconnectionstring}&quot; /&gt;
+        &lt;Setting name=&quot;ContosoAdsDbConnectionString&quot; value=&quot;{yourconnectionstring}&quot; /&gt;
+        &lt;!-- other settings not shown --&gt;
+
+    &lt;/ConfigurationSettings&gt;
+    &lt;!-- other settings not shown --&gt;
+
+&lt;/Role&gt;
+</code></pre>
+<p>The <code>&lt;Instances&gt;</code> setting specifies the number of virtual machines that Azure will run the worker role code on. The <a href="#next-steps" data-linktype="self-bookmark">Next steps</a> section includes links to more information about scaling out a cloud service,</p>
+<h3 id="deploy-the-project-to-azure">Deploy the project to Azure</h3>
+<ol>
+<li><p>In <strong>Solution Explorer</strong>, right-click the <strong>ContosoAdsCloudService</strong> cloud project and then select <strong>Publish</strong>.</p>
+<p><img src="media/cloud-services-dotnet-get-started/pubmenu.png" alt="Publish menu" data-linktype="relative-path"/></p>
+</li>
+<li><p>In the <strong>Sign in</strong> step of the <strong>Publish Azure Application</strong> wizard, click <strong>Next</strong>.</p>
+<p><img src="media/cloud-services-dotnet-get-started/pubsignin.png" alt="Sign in step" data-linktype="relative-path"/></p>
+</li>
+<li><p>In the <strong>Settings</strong> step of the wizard, click <strong>Next</strong>.</p>
+<p><img src="media/cloud-services-dotnet-get-started/pubsettings.png" alt="Settings step" data-linktype="relative-path"/></p>
+<p>The default settings in the <strong>Advanced</strong> tab are fine for this tutorial. For information about the advanced tab, see <a href="/en-us/visualstudio/azure/vs-azure-tools-publish-azure-application-wizard" data-linktype="absolute-path">Publish Azure Application Wizard</a>.</p>
+</li>
+<li><p>In the <strong>Summary</strong> step, click <strong>Publish</strong>.</p>
+<p><img src="media/cloud-services-dotnet-get-started/pubsummary.png" alt="Summary step" data-linktype="relative-path"/></p>
+<p>The <strong>Azure Activity Log</strong> window opens in Visual Studio.</p>
+</li>
+<li><p>Click the right arrow icon to expand the deployment details.</p>
+<p>The deployment can take up to 5 minutes or more to complete.</p>
+<p><img src="media/cloud-services-dotnet-get-started/waal.png" alt="Azure Activity Log window" data-linktype="relative-path"/></p>
+</li>
+<li><p>When the deployment status is complete, click the <strong>Web app URL</strong> to start the application.</p>
+</li>
+<li><p>You can now test the app by creating, viewing, and editing some ads, as you did when you ran the application locally.</p>
+</li>
+</ol>
+<div class="NOTE">
+<p>Note</p>
+<p>When you're finished testing, delete or stop the cloud service. Even if you're not using the cloud service, it's accruing charges because virtual machine resources are reserved for it. And if you leave it running, anyone who finds your URL can create and view ads. In the <a href="https://portal.azure.com" data-linktype="external">Azure portal</a>, go to the <strong>Overview</strong> tab for your cloud service, and then click the <strong>Delete</strong> button at the top of the page. If you just want to temporarily prevent others from accessing the site, click <strong>Stop</strong> instead. In that case, charges will continue to accrue. You can follow a similar procedure to delete the SQL database and storage account when you no longer need them.</p>
+</div>
+<h2 id="create-the-application-from-scratch">Create the application from scratch</h2>
+<p>If you haven't already downloaded
+<a href="https://code.msdn.microsoft.com/Simple-Azure-Cloud-Service-e01df2e4" data-linktype="external">the completed application</a>, do that now. You'll copy files from the downloaded project into the new project.</p>
+<p>Creating the Contoso Ads application involves the following steps:</p>
+<ul>
+<li>Create a cloud service Visual Studio solution.</li>
+<li>Update and add NuGet packages.</li>
+<li>Set project references.</li>
+<li>Configure connection strings.</li>
+<li>Add code files.</li>
+</ul>
+<p>After the solution is created, you'll review the code that is unique to cloud service projects and Azure blobs and queues.</p>
+<h3 id="create-a-cloud-service-visual-studio-solution">Create a cloud service Visual Studio solution</h3>
+<ol>
+<li><p>In Visual Studio, choose <strong>New Project</strong> from the <strong>File</strong> menu.</p>
+</li>
+<li><p>In the left pane of the <strong>New Project</strong> dialog box, expand <strong>Visual C#</strong> and choose <strong>Cloud</strong> templates, and then choose the <strong>Azure Cloud Service</strong> template.</p>
+</li>
+<li><p>Name the project and solution ContosoAdsCloudService, and then click <strong>OK</strong>.</p>
+<p><img src="media/cloud-services-dotnet-get-started/newproject.png" alt="New Project" data-linktype="relative-path"/></p>
+</li>
+<li><p>In the <strong>New Azure Cloud Service</strong> dialog box, add a web role and a worker role. Name the web role ContosoAdsWeb, and name the worker role ContosoAdsWorker. (Use the pencil icon in the right-hand pane to change the default names of the roles.)</p>
+<p><img src="media/cloud-services-dotnet-get-started/newcsproj.png" alt="New Cloud Service Project" data-linktype="relative-path"/></p>
+</li>
+<li><p>When you see the <strong>New ASP.NET Project</strong> dialog box for the web role, choose the MVC template, and then click <strong>Change Authentication</strong>.</p>
+<p><img src="media/cloud-services-dotnet-get-started/chgauth.png" alt="Change Authentication" data-linktype="relative-path"/></p>
+</li>
+<li><p>In the <strong>Change Authentication</strong> dialog box, choose <strong>No Authentication</strong>, and then click <strong>OK</strong>.</p>
+<p><img src="media/cloud-services-dotnet-get-started/noauth.png" alt="No Authentication" data-linktype="relative-path"/></p>
+</li>
+<li><p>In the <strong>New ASP.NET Project</strong> dialog, click <strong>OK</strong>.</p>
+</li>
+<li><p>In <strong>Solution Explorer</strong>, right-click the solution (not one of the projects), and choose <strong>Add - New Project</strong>.</p>
+</li>
+<li><p>In the <strong>Add New Project</strong> dialog box, choose <strong>Windows</strong> under <strong>Visual C#</strong> in the left pane, and then click the <strong>Class Library</strong> template.</p>
+</li>
+<li><p>Name the project <em>ContosoAdsCommon</em>, and then click <strong>OK</strong>.</p>
+<p>You need to reference the Entity Framework context and the data model from both web and worker role projects. As an alternative, you could define the EF-related classes in the web role project and reference that project from the worker role project. But in the alternative approach, your worker role project would have a reference to web assemblies that it doesn't need.</p>
+</li>
+</ol>
+<h3 id="update-and-add-nuget-packages">Update and add NuGet packages</h3>
+<ol>
+<li><p>Open the <strong>Manage NuGet Packages</strong> dialog box for the solution.</p>
+</li>
+<li><p>At the top of the window, select <strong>Updates</strong>.</p>
+</li>
+<li><p>Look for the <em>WindowsAzure.Storage</em> package, and if it's in the list, select it and select the web and worker projects to update it in, and then click <strong>Update</strong>.</p>
+<p>The storage client library is updated more frequently than Visual Studio project templates, so you'll often find that the version in a newly-created project needs to be updated.</p>
+</li>
+<li><p>At the top of the window, select <strong>Browse</strong>.</p>
+</li>
+<li><p>Find the <em>EntityFramework</em> NuGet package, and install it in all three projects.</p>
+</li>
+<li><p>Find the <em>Microsoft.WindowsAzure.ConfigurationManager</em> NuGet package, and install it in the worker role project.</p>
+</li>
+</ol>
+<h3 id="set-project-references">Set project references</h3>
+<ol>
+<li><p>In the ContosoAdsWeb project, set a reference to the ContosoAdsCommon project. Right-click the ContosoAdsWeb project, and then click <strong>References</strong> - <strong>Add References</strong>. In the <strong>Reference Manager</strong> dialog box, select <strong>Solution – Projects</strong> in the left pane, select <strong>ContosoAdsCommon</strong>, and then click <strong>OK</strong>.</p>
+</li>
+<li><p>In the ContosoAdsWorker project, set a reference to the ContosoAdsCommon project.</p>
+<p>ContosoAdsCommon will contain the Entity Framework data model and context class, which will be used by both the front-end and back-end.</p>
+</li>
+<li><p>In the ContosoAdsWorker project, set a reference to <code>System.Drawing</code>.</p>
+<p>This assembly is used by the back-end to convert images to thumbnails.</p>
+</li>
+</ol>
+<h3 id="configure-connection-strings">Configure connection strings</h3>
+<p>In this section, you configure Azure Storage and SQL connection strings for testing locally. The deployment instructions earlier in the tutorial explain how to set up the connection strings for when the app runs in the cloud.</p>
+<ol>
+<li><p>In the ContosoAdsWeb project, open the application Web.config file, and insert the following <code>connectionStrings</code> element after the <code>configSections</code> element.</p>
+<pre><code class="lang-xml">&lt;connectionStrings&gt;
+    &lt;add name=&quot;ContosoAdsContext&quot; connectionString=&quot;Data Source=(localdb)\v11.0; Initial Catalog=ContosoAds; Integrated Security=True; MultipleActiveResultSets=True;&quot; providerName=&quot;System.Data.SqlClient&quot; /&gt;
+&lt;/connectionStrings&gt;
+</code></pre>
+<p>If you're using Visual Studio 2015 or higher, replace &quot;v11.0&quot; with &quot;MSSQLLocalDB&quot;.</p>
+</li>
+<li><p>Save your changes.</p>
+</li>
+<li><p>In the ContosoAdsCloudService project, right-click ContosoAdsWeb under <strong>Roles</strong>, and then click <strong>Properties</strong>.</p>
+<p><img src="media/cloud-services-dotnet-get-started/roleproperties.png" alt="Role properties image" data-linktype="relative-path"/></p>
+</li>
+<li><p>In the <strong>ContosoAdsWeb [Role]</strong> properties window, click the <strong>Settings</strong> tab, and then click <strong>Add Setting</strong>.</p>
+<p>Leave <strong>Service Configuration</strong> set to <strong>All Configurations</strong>.</p>
+</li>
+<li><p>Add a setting named <em>StorageConnectionString</em>. Set <strong>Type</strong> to <em>ConnectionString</em>, and set <strong>Value</strong> to <em>UseDevelopmentStorage=true</em>.</p>
+<p><img src="media/cloud-services-dotnet-get-started/scall.png" alt="New connection string" data-linktype="relative-path"/></p>
+</li>
+<li><p>Save your changes.</p>
+</li>
+<li><p>Follow the same procedure to add a storage connection string in the ContosoAdsWorker role properties.</p>
+</li>
+<li><p>Still in the <strong>ContosoAdsWorker [Role]</strong> properties window, add another connection string:</p>
+<ul>
+<li><p>Name: ContosoAdsDbConnectionString</p>
+</li>
+<li><p>Type: String</p>
+</li>
+<li><p>Value: Paste the same connection string you used for the web role project. (The following example is for Visual Studio 2013. Don't forget to change the Data Source if you copy this example and you're using Visual Studio 2015 or higher.)</p>
+<pre><code>Data Source=(localdb)\v11.0; Initial Catalog=ContosoAds; Integrated Security=True; MultipleActiveResultSets=True;
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="add-code-files">Add code files</h3>
+<p>In this section, you copy code files from the downloaded solution into the new solution. The following sections will show and explain key parts of this code.</p>
+<p>To add files to a project or a folder, right-click the project or folder and click <strong>Add</strong> - <strong>Existing Item</strong>. Select the files you want and then click <strong>Add</strong>. If asked whether you want to replace existing files, click <strong>Yes</strong>.</p>
+<ol>
+<li><p>In the ContosoAdsCommon project, delete the <em>Class1.cs</em> file and add in its place the <em>Ad.cs</em> and <em>ContosoAdscontext.cs</em> files from the downloaded project.</p>
+</li>
+<li><p>In the ContosoAdsWeb project, add the following files from the downloaded project.</p>
+<ul>
+<li><em>Global.asax.cs</em>.</li>
+<li>In the <em>Views\Shared</em> folder: <em>_Layout.cshtml</em>.</li>
+<li>In the <em>Views\Home</em> folder: <em>Index.cshtml</em>.</li>
+<li>In the <em>Controllers</em> folder: <em>AdController.cs</em>.</li>
+<li>In the <em>Views\Ad</em> folder (create the folder first): five <em>.cshtml</em> files.</li>
+</ul>
+</li>
+<li><p>In the ContosoAdsWorker project, add <em>WorkerRole.cs</em> from the downloaded project.</p>
+</li>
+</ol>
+<p>You can now build and run the application as instructed earlier in the tutorial, and the app will use local database and storage emulator resources.</p>
+<p>The following sections explain the code related to working with the Azure environment, blobs, and queues. This tutorial does not explain how to create MVC controllers and views using scaffolding, how to write Entity Framework code that works with SQL Server databases, or the basics of asynchronous programming in ASP.NET 4.5. For information about these topics, see the following resources:</p>
+<ul>
+<li><a href="https://www.asp.net/mvc/tutorials/mvc-5/introduction/getting-started" data-linktype="external">Get started with MVC 5</a></li>
+<li><a href="https://www.asp.net/mvc/tutorials/getting-started-with-ef-using-mvc" data-linktype="external">Get started with EF 6 and MVC 5</a></li>
+<li><a href="https://www.asp.net/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/web-development-best-practices#async" data-linktype="external">Introduction to asynchronous programming in .NET 4.5</a>.</li>
+</ul>
+<h3 id="contosoadscommon---adcs">ContosoAdsCommon - Ad.cs</h3>
+<p>The Ad.cs file defines an enum for ad categories and a POCO entity class for ad information.</p>
+<pre><code class="lang-csharp">public enum Category
+{
+    Cars,
+    [Display(Name=&quot;Real Estate&quot;)]
+    RealEstate,
+    [Display(Name = &quot;Free Stuff&quot;)]
+    FreeStuff
+}
+
+public class Ad
+{
+    public int AdId { get; set; }
+
+    [StringLength(100)]
+    public string Title { get; set; }
+
+    public int Price { get; set; }
+
+    [StringLength(1000)]
+    [DataType(DataType.MultilineText)]
+    public string Description { get; set; }
+
+    [StringLength(1000)]
+    [DisplayName(&quot;Full-size Image&quot;)]
+    public string ImageURL { get; set; }
+
+    [StringLength(1000)]
+    [DisplayName(&quot;Thumbnail&quot;)]
+    public string ThumbnailURL { get; set; }
+
+    [DataType(DataType.Date)]
+    [DisplayFormat(DataFormatString = &quot;{0:yyyy-MM-dd}&quot;, ApplyFormatInEditMode = true)]
+    public DateTime PostedDate { get; set; }
+
+    public Category? Category { get; set; }
+    [StringLength(12)]
+    public string Phone { get; set; }
+}
+</code></pre>
+<h3 id="contosoadscommon---contosoadscontextcs">ContosoAdsCommon - ContosoAdsContext.cs</h3>
+<p>The ContosoAdsContext class specifies that the Ad class is used in a DbSet collection, which Entity Framework will store in a SQL database.</p>
+<pre><code class="lang-csharp">public class ContosoAdsContext : DbContext
+{
+    public ContosoAdsContext() : base(&quot;name=ContosoAdsContext&quot;)
+    {
+    }
+    public ContosoAdsContext(string connString)
+        : base(connString)
+    {
+    }
+    public System.Data.Entity.DbSet&lt;Ad&gt; Ads { get; set; }
+}
+</code></pre>
+<p>The class has two constructors. The first of them is used by the web project, and specifies the name of a connection string that is stored in the Web.config file. The second constructor enables you to pass in the actual connection string used by the worker role project, since it doesn't have a Web.config file. You saw earlier where this connection string was stored, and you'll see later how the code retrieves the connection string when it instantiates the DbContext class.</p>
+<h3 id="contosoadsweb---globalasaxcs">ContosoAdsWeb - Global.asax.cs</h3>
+<p>Code that is called from the <code>Application_Start</code> method creates an <em>images</em> blob container and an <em>images</em> queue if they don't already exist. This ensures that whenever you start using a new storage account, or start using the storage emulator on a new computer, the required blob container and queue will be created automatically.</p>
+<p>The code gets access to the storage account by using the storage connection string from the <em>.cscfg</em> file.</p>
+<pre><code class="lang-csharp">var storageAccount = CloudStorageAccount.Parse
+    (RoleEnvironment.GetConfigurationSettingValue(&quot;StorageConnectionString&quot;));
+</code></pre>
+<p>Then it gets a reference to the <em>images</em> blob container, creates the container if it doesn't already exist, and sets access permissions on the new container. By default, new containers only allow clients with storage account credentials to access blobs. The website needs the blobs to be public so that it can display images using URLs that point to the image blobs.</p>
+<pre><code class="lang-csharp">var blobClient = storageAccount.CreateCloudBlobClient();
+var imagesBlobContainer = blobClient.GetContainerReference(&quot;images&quot;);
+if (imagesBlobContainer.CreateIfNotExists())
+{
+    imagesBlobContainer.SetPermissions(
+        new BlobContainerPermissions
+        {
+            PublicAccess =BlobContainerPublicAccessType.Blob
+        });
+}
+</code></pre>
+<p>Similar code gets a reference to the <em>images</em> queue and creates a new queue. In this case, no permissions change is needed.</p>
+<pre><code class="lang-csharp">CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient();
+var imagesQueue = queueClient.GetQueueReference(&quot;images&quot;);
+imagesQueue.CreateIfNotExists();
+</code></pre>
+<h3 id="contosoadsweb---_layoutcshtml">ContosoAdsWeb - _Layout.cshtml</h3>
+<p>The <em>_Layout.cshtml</em> file sets the app name in the header and footer, and creates an &quot;Ads&quot; menu entry.</p>
+<h3 id="contosoadsweb---viewshomeindexcshtml">ContosoAdsWeb - Views\Home\Index.cshtml</h3>
+<p>The <em>Views\Home\Index.cshtml</em> file displays category links on the home page. The links pass the integer value of the <code>Category</code> enum in a querystring variable to the Ads Index page.</p>
+<pre><code class="lang-razor">&lt;li&gt;@Html.ActionLink(&quot;Cars&quot;, &quot;Index&quot;, &quot;Ad&quot;, new { category = (int)Category.Cars }, null)&lt;/li&gt;
+&lt;li&gt;@Html.ActionLink(&quot;Real estate&quot;, &quot;Index&quot;, &quot;Ad&quot;, new { category = (int)Category.RealEstate }, null)&lt;/li&gt;
+&lt;li&gt;@Html.ActionLink(&quot;Free stuff&quot;, &quot;Index&quot;, &quot;Ad&quot;, new { category = (int)Category.FreeStuff }, null)&lt;/li&gt;
+&lt;li&gt;@Html.ActionLink(&quot;All&quot;, &quot;Index&quot;, &quot;Ad&quot;, null, null)&lt;/li&gt;
+</code></pre>
+<h3 id="contosoadsweb---adcontrollercs">ContosoAdsWeb - AdController.cs</h3>
+<p>In the <em>AdController.cs</em> file, the constructor calls the <code>InitializeStorage</code> method to create Azure Storage Client Library objects that provide an API for working with blobs and queues.</p>
+<p>Then the code gets a reference to the <em>images</em> blob container as you saw earlier in <em>Global.asax.cs</em>. While doing that it sets a default <a href="https://www.asp.net/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/transient-fault-handling" data-linktype="external">retry policy</a> appropriate for a web app. The default exponential backoff retry policy could cause the web app to stop responding for longer than a minute on repeated retries for a transient fault. The retry policy specified here waits three seconds after each try for up to three tries.</p>
+<pre><code class="lang-csharp">var blobClient = storageAccount.CreateCloudBlobClient();
+blobClient.DefaultRequestOptions.RetryPolicy = new LinearRetry(TimeSpan.FromSeconds(3), 3);
+imagesBlobContainer = blobClient.GetContainerReference(&quot;images&quot;);
+</code></pre>
+<p>Similar code gets a reference to the <em>images</em> queue.</p>
+<pre><code class="lang-csharp">CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient();
+queueClient.DefaultRequestOptions.RetryPolicy = new LinearRetry(TimeSpan.FromSeconds(3), 3);
+imagesQueue = queueClient.GetQueueReference(&quot;images&quot;);
+</code></pre>
+<p>Most of the controller code is typical for working with an Entity Framework data model using a DbContext class. An exception is the HttpPost <code>Create</code> method, which uploads a file and saves it in blob storage. The model binder provides an <a href="/en-us/dotnet/api/system.web.httppostedfilebase" data-linktype="absolute-path">HttpPostedFileBase</a> object to the method.</p>
+<pre><code class="lang-csharp">[HttpPost]
+[ValidateAntiForgeryToken]
+public async Task&lt;ActionResult&gt; Create(
+    [Bind(Include = &quot;Title,Price,Description,Category,Phone&quot;)] Ad ad,
+    HttpPostedFileBase imageFile)
+</code></pre>
+<p>If the user selected a file to upload, the code uploads the file, saves it in a blob, and updates the Ad database record with a URL that points to the blob.</p>
+<pre><code class="lang-csharp">if (imageFile != null &amp;&amp; imageFile.ContentLength != 0)
+{
+    blob = await UploadAndSaveBlobAsync(imageFile);
+    ad.ImageURL = blob.Uri.ToString();
+}
+</code></pre>
+<p>The code that does the upload is in the <code>UploadAndSaveBlobAsync</code> method. It creates a GUID name for the blob, uploads and saves the file, and returns a reference to the saved blob.</p>
+<pre><code class="lang-csharp">private async Task&lt;CloudBlockBlob&gt; UploadAndSaveBlobAsync(HttpPostedFileBase imageFile)
+{
+    string blobName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
+    CloudBlockBlob imageBlob = imagesBlobContainer.GetBlockBlobReference(blobName);
+    using (var fileStream = imageFile.InputStream)
+    {
+        await imageBlob.UploadFromStreamAsync(fileStream);
+    }
+    return imageBlob;
+}
+</code></pre>
+<p>After the HttpPost <code>Create</code> method uploads a blob and updates the database, it creates a queue message to inform that back-end process that an image is ready for conversion to a thumbnail.</p>
+<pre><code class="lang-csharp">string queueMessageString = ad.AdId.ToString();
+var queueMessage = new CloudQueueMessage(queueMessageString);
+await queue.AddMessageAsync(queueMessage);
+</code></pre>
+<p>The code for the HttpPost <code>Edit</code> method is similar except that if the user selects a new image file any blobs that already exist must be deleted.</p>
+<pre><code class="lang-csharp">if (imageFile != null &amp;&amp; imageFile.ContentLength != 0)
+{
+    await DeleteAdBlobsAsync(ad);
+    imageBlob = await UploadAndSaveBlobAsync(imageFile);
+    ad.ImageURL = imageBlob.Uri.ToString();
+}
+</code></pre>
+<p>The next example shows the code that deletes blobs when you delete an ad.</p>
+<pre><code class="lang-csharp">private async Task DeleteAdBlobsAsync(Ad ad)
+{
+    if (!string.IsNullOrWhiteSpace(ad.ImageURL))
+    {
+        Uri blobUri = new Uri(ad.ImageURL);
+        await DeleteAdBlobAsync(blobUri);
+    }
+    if (!string.IsNullOrWhiteSpace(ad.ThumbnailURL))
+    {
+        Uri blobUri = new Uri(ad.ThumbnailURL);
+        await DeleteAdBlobAsync(blobUri);
+    }
+}
+private static async Task DeleteAdBlobAsync(Uri blobUri)
+{
+    string blobName = blobUri.Segments[blobUri.Segments.Length - 1];
+    CloudBlockBlob blobToDelete = imagesBlobContainer.GetBlockBlobReference(blobName);
+    await blobToDelete.DeleteAsync();
+}
+</code></pre>
+<h3 id="contosoadsweb---viewsadindexcshtml-and-detailscshtml">ContosoAdsWeb - Views\Ad\Index.cshtml and Details.cshtml</h3>
+<p>The <em>Index.cshtml</em> file displays thumbnails with the other ad data.</p>
+<pre><code class="lang-razor">&lt;img src=&quot;@Html.Raw(item.ThumbnailURL)&quot; /&gt;
+</code></pre>
+<p>The <em>Details.cshtml</em> file displays the full-size image.</p>
+<pre><code class="lang-razor">&lt;img src=&quot;@Html.Raw(Model.ImageURL)&quot; /&gt;
+</code></pre>
+<h3 id="contosoadsweb---viewsadcreatecshtml-and-editcshtml">ContosoAdsWeb - Views\Ad\Create.cshtml and Edit.cshtml</h3>
+<p>The <em>Create.cshtml</em> and <em>Edit.cshtml</em> files specify form encoding that enables the controller to get the <code>HttpPostedFileBase</code> object.</p>
+<pre><code class="lang-razor">@using (Html.BeginForm(&quot;Create&quot;, &quot;Ad&quot;, FormMethod.Post, new { enctype = &quot;multipart/form-data&quot; }))
+</code></pre>
+<p>An <code>&lt;input&gt;</code> element tells the browser to provide a file selection dialog.</p>
+<pre><code class="lang-razor">&lt;input type=&quot;file&quot; name=&quot;imageFile&quot; accept=&quot;image/*&quot; class=&quot;form-control fileupload&quot; /&gt;
+</code></pre>
+<h3 id="contosoadsworker---workerrolecs---onstart-method">ContosoAdsWorker - WorkerRole.cs - OnStart method</h3>
+<p>The Azure worker role environment calls the <code>OnStart</code> method in the <code>WorkerRole</code> class when the worker role is getting started, and it calls the <code>Run</code> method when the <code>OnStart</code> method finishes.</p>
+<p>The <code>OnStart</code> method gets the database connection string from the <em>.cscfg</em> file and passes it to the Entity Framework DbContext class. The SQLClient provider is used by default, so the provider does not have to be specified.</p>
+<pre><code class="lang-csharp">var dbConnString = CloudConfigurationManager.GetSetting(&quot;ContosoAdsDbConnectionString&quot;);
+db = new ContosoAdsContext(dbConnString);
+</code></pre>
+<p>After that, the method gets a reference to the storage account and creates the blob container and queue if they don't exist. The code for that is similar to what you already saw in the web role <code>Application_Start</code> method.</p>
+<h3 id="contosoadsworker---workerrolecs---run-method">ContosoAdsWorker - WorkerRole.cs - Run method</h3>
+<p>The <code>Run</code> method is called when the <code>OnStart</code> method finishes its initialization work. The method executes an infinite loop that watches for new queue messages and processes them when they arrive.</p>
+<pre><code class="lang-csharp">public override void Run()
+{
+    CloudQueueMessage msg = null;
+
+    while (true)
+    {
+        try
+        {
+            msg = this.imagesQueue.GetMessage();
+            if (msg != null)
+            {
+                ProcessQueueMessage(msg);
+            }
+            else
+            {
+                System.Threading.Thread.Sleep(1000);
+            }
+        }
+        catch (StorageException e)
+        {
+            if (msg != null &amp;&amp; msg.DequeueCount &gt; 5)
+            {
+                this.imagesQueue.DeleteMessage(msg);
+            }
+            System.Threading.Thread.Sleep(5000);
+        }
+    }
+}
+</code></pre>
+<p>After each iteration of the loop, if no queue message was found, the program sleeps for a second. This prevents the worker role from incurring excessive CPU time and storage transaction costs. The Microsoft Customer Advisory Team tells a story about a  developer who forgot to include this, deployed to production, and left for vacation. When they got back, their oversight cost more than the vacation.</p>
+<p>Sometimes the content of a queue message causes an error in processing. This is called a <em>poison message</em>, and if you just logged an error and restarted the loop, you could endlessly try to process that message.  Therefore the catch block includes an if statement that checks to see how many times the app has tried to process the current message, and if it has been more than 5 times, the message is deleted from the queue.</p>
+<p><code>ProcessQueueMessage</code> is called when a queue message is found.</p>
+<pre><code class="lang-csharp">private void ProcessQueueMessage(CloudQueueMessage msg)
+{
+    var adId = int.Parse(msg.AsString);
+    Ad ad = db.Ads.Find(adId);
+    if (ad == null)
+    {
+        throw new Exception(String.Format(&quot;AdId {0} not found, can't create thumbnail&quot;, adId.ToString()));
+    }
+
+    CloudBlockBlob inputBlob = this.imagesBlobContainer.GetBlockBlobReference(ad.ImageURL);
+
+    string thumbnailName = Path.GetFileNameWithoutExtension(inputBlob.Name) + &quot;thumb.jpg&quot;;
+    CloudBlockBlob outputBlob = this.imagesBlobContainer.GetBlockBlobReference(thumbnailName);
+
+    using (Stream input = inputBlob.OpenRead())
+    using (Stream output = outputBlob.OpenWrite())
+    {
+        ConvertImageToThumbnailJPG(input, output);
+        outputBlob.Properties.ContentType = &quot;image/jpeg&quot;;
+    }
+
+    ad.ThumbnailURL = outputBlob.Uri.ToString();
+    db.SaveChanges();
+
+    this.imagesQueue.DeleteMessage(msg);
+}
+</code></pre>
+<p>This code reads the database to get the image URL, converts the image to a thumbnail, saves the thumbnail in a blob, updates the database with the thumbnail blob URL, and deletes the queue message.</p>
+<div class="NOTE">
+<p>Note</p>
+<p>The code in the <code>ConvertImageToThumbnailJPG</code> method uses classes in the System.Drawing namespace for simplicity. However, the classes in this namespace were designed for use with Windows Forms. They are not supported for use in a Windows or ASP.NET service. For more information about image-processing options, see <a href="https://www.hanselman.com/blog/BackToBasicsDynamicImageGenerationASPNETControllersRoutingIHttpHandlersAndRunAllManagedModulesForAllRequests.aspx" data-linktype="external">Dynamic Image Generation</a> and <a href="https://www.hanselminutes.com/313/deep-inside-image-resizing-and-scaling-with-aspnet-and-iis-with-imageresizingnet-author-na" data-linktype="external">Deep Inside Image Resizing</a>.</p>
+</div>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>In case something doesn't work while you're following the instructions in this tutorial, here are some common errors and how to resolve them.</p>
+<h3 id="serviceruntimeroleenvironmentexception">ServiceRuntime.RoleEnvironmentException</h3>
+<p>The <code>RoleEnvironment</code> object is provided by Azure when you run an application in Azure or when you run locally using the Azure Compute Emulator.  If you get this error when you're running locally, make sure that you have set the ContosoAdsCloudService project as the startup project. This sets up the project to run using the Azure Compute Emulator.</p>
+<p>One of the things the application uses the Azure RoleEnvironment for is to get the connection string values that are stored in the <em>.cscfg</em> files, so another cause of this exception is a missing connection string. Make sure that you created the StorageConnectionString setting for both Cloud and Local configurations in the ContosoAdsWeb project, and that you created both connection strings for both configurations in the ContosoAdsWorker project. If you do a <strong>Find All</strong> search for StorageConnectionString in the entire solution, you should see it 9 times in 6 files.</p>
+<h3 id="cannot-override-to-port-xxx-new-port-below-minimum-allowed-value-8080-for-protocol-http">Cannot override to port xxx. New port below minimum allowed value 8080 for protocol http</h3>
+<p>Try changing the port number used by the web project. Right-click the ContosoAdsWeb project, and then click <strong>Properties</strong>. Click the <strong>Web</strong> tab, and then change the port number in the <strong>Project Url</strong> setting.</p>
+<p>For another alternative that might resolve the problem, see the following  section.</p>
+<h3 id="other-errors-when-running-locally">Other errors when running locally</h3>
+<p>By default new cloud service projects use the Azure Compute Emulator express to simulate the Azure environment. This is a lightweight version of the full compute emulator, and under some conditions the full emulator will work when the express version does not.</p>
+<p>To change the project to use the full emulator, right-click the ContosoAdsCloudService project, and then click <strong>Properties</strong>. In the <strong>Properties</strong> window click the <strong>Web</strong> tab, and then click the <strong>Use Full Emulator</strong> radio button.</p>
+<p>In order to run the application with the full emulator, you have to open Visual Studio with administrator privileges.</p>
+<h2 id="next-steps">Next steps</h2>
+<p>The Contoso Ads application has intentionally been kept simple for a getting-started tutorial. For example, it doesn't implement <a href="https://www.asp.net/mvc/tutorials/hands-on-labs/aspnet-mvc-4-dependency-injection" data-linktype="external">dependency injection</a> or the <a href="https://www.asp.net/mvc/tutorials/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application#repo" data-linktype="external">repository and unit of work patterns</a>, it doesn't <a href="https://www.asp.net/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/monitoring-and-telemetry#log" data-linktype="external">use an interface for logging</a>, it doesn't use <a href="https://www.asp.net/mvc/tutorials/getting-started-with-ef-using-mvc/migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application" data-linktype="external">EF Code First Migrations</a> to manage data model changes or <a href="https://www.asp.net/mvc/tutorials/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application" data-linktype="external">EF Connection Resiliency</a> to manage transient network errors, and so forth.</p>
+<p>Here are some cloud service sample applications that demonstrate more real-world coding practices, listed from less complex to more complex:</p>
+<ul>
+<li><a href="https://code.msdn.microsoft.com/PhluffyFotos-Sample-7ecffd31" data-linktype="external">PhluffyFotos</a>. Similar in concept to Contoso Ads but implements more features and more real-world coding practices.</li>
+<li><a href="https://code.msdn.microsoft.com/windowsazure/Windows-Azure-Multi-Tier-eadceb36" data-linktype="external">Azure Cloud Service Multi-Tier Application with Tables, Queues, and Blobs</a>. Introduces Azure Storage tables as well as blobs and queues. Based on an older version of the Azure SDK for .NET, will require some modifications to work with the current version.</li>
+</ul>
+<p>For general information about developing for the cloud, see <a href="https://www.asp.net/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/introduction" data-linktype="external">Building Real-World Cloud Apps with Azure</a>.</p>
+<p>For a video introduction to Azure Storage best practices and patterns, see Microsoft Azure Storage – What's New, Best Practices and Patterns.</p>
+<p>For more information, see the following resources:</p>
+<ul>
+<li><a href="cloud-services-how-to-manage-portal" data-linktype="relative-path">How to manage Cloud Services</a></li>
+<li><a href="../storage/" data-linktype="relative-path">Azure Storage</a></li>
+<li><a href="https://azure.microsoft.com/overview/choosing-a-cloud-service-provider/" data-linktype="external">How to choose a cloud service provider</a></li>
+</ul>
+
+							</div>
+
+							<div id="assertive-live-region" role="alert" aria-live="assertive" class="visually-hidden" aria-relevant="additions" aria-atomic="true"></div>
+							<div id="polite-live-region" role="status" aria-live="polite" class="visually-hidden" aria-relevant="additions" aria-atomic="true"></div>
+							<!-- </content> -->
+
+						</main>
+
+
+
+
+						<!-- recommendations section -->
+						<!-- end recommendations section -->
+
+						<!-- feedback section -->
+<section class="feedback-section position-relative" data-bi-name="feedback-section">
+    <h2 id="feedback" class="title is-3 margin-top-sm">Feedback</h2>
+
+    <div class="alert choose-feedback-type padding-bottom-sm">
+        <p id="send-feedback-about">Submit and view feedback for</p>
+
+        <div class="choose-feedback-buttons buttons margin-top-xs">
+                <a class="button has-external-link-indicator feedback-type-product" aria-label="Send feedback about this product" href="https://feedback.azure.com/d365community/forum/a80be93d-0d25-ec11-b6e6-000d3a4f07b8" data-bi-name="product-feedback">
+                    <span>This product</span>
+                </a>
+			<a class="button feedback-type-product github-link" aria-label="Send feedback about this page" data-bi-name="create-issue-on-github">
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-brand-github"></span>
+				</span>
+				<span>This page</span>
+			</a>
+        </div>
+    </div>
+
+    <div class="action-container display-flex justify-content-flex-end margin-block-xxs">
+        <a class="view-on-github has-external-link-indicator" data-bi-name="view-on-github" href="https://github.com/MicrosoftDocs/azure-docs/issues">
+            <span aria-hidden="true" class="docon docon-brand-github"></span>
+            <span>View all page feedback</span>
+        </a>
+    </div>
+</section>
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+							<div
+								id="ms--additional-resources-mobile"
+								role="complementary"
+								aria-label="Additional resources"
+								class="display-none-desktop display-none-print"
+							>
+								<hr class="hr" hidden />
+								<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>Additional resources</h2>
+								<section id="right-rail-recommendations-mobile" data-bi-name="recommendations" hidden></section>
+								<section id="right-rail-training-mobile" data-bi-name="learning-resources-card" hidden></section>
+								<section id="right-rail-events-mobile" data-bi-name="events-card" hidden></section>
+								<section id="right-rail-qna-mobile" data-bi-name="qna-link-card" hidden></section>
+							</div>
+
+						<div class="border-top is-visible-interactive has-default-focus margin-top-sm ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+	<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+			<a
+				data-mscc-ic="false"
+				class="locale-selector-link button button-sm button-clear flex-shrink-0"
+				href="#"
+				data-bi-name="select-locale">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text"></span></a>
+		<div class="ccpa-privacy-link flex-shrink-0" hidden>
+<a
+	href="https://aka.ms/yourcaliforniaprivacychoices"
+	class="button button-sm button-clear"
+	data-mscc-ic="false"
+	data-bi-name="your-privacy-choices"
+>
+	<svg
+		role="img"
+		aria-label="California Consumer Privacy Act (CCPA) Opt-Out Icon"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 30 14"
+		xml:space="preserve"
+		height="16"
+		width="43"
+		focusable="false"
+	>
+		<title>California Consumer Privacy Act (CCPA) Opt-Out Icon</title>
+		<path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+		<path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+		<path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+		<path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+	</svg>
+	<span>Your Privacy Choices</span>
+</a>
+		</div>
+		<div class="flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu-interactive" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+		<span class="icon expanded-indicator" aria-hidden="true">
+			<span class="docon docon-chevron-down-light"></span>
+		</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector padding-xxs" role="none">
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light margin-right-xxs">
+						<span
+							class="theme-selector-icon border display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Light					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark margin-right-xxs">
+						<span
+							class="border theme-selector-icon display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span
+							class="border theme-selector-icon display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/previous-versions/" data-bi-name="archivelink">Previous Versions</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog" data-bi-name="bloglink">Blog</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/contribute/" data-bi-name="contributorGuide">Contribute</a></li>
+					<li><a class="external-link-indicator" data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2024</li>
+	</ul>
+</footer>
+						</div>
+
+					</div>
+
+						<div
+							id="ms--additional-resources"
+							class="right-container column is-4-desktop display-none display-block-desktop"
+							data-bi-name="pageactions"
+							role="complementary"
+							aria-label="Additional resources"
+						>
+							<div id="affixed-right-container" class="margin-top-sm-tablet" data-bi-name="right-column">
+								<h2 id="ms--additional-resources-heading" class="title is-6 margin-top-md" hidden>Additional resources</h2>
+								<section id="right-rail-events" data-bi-name="events-card" hidden></section>
+								<section id="right-rail-training" data-bi-name="learning-resources-card" hidden></section>
+								<section id="right-rail-recommendations" data-bi-name="recommendations" hidden></section>
+								<nav id="side-doc-outline" class="doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="In this article">
+									<h3>In this article</h3>
+								</nav>
+								<section id="right-rail-qna" class="margin-top-xxs" data-bi-name="qna-link-card" hidden></section>
+							</div>
+						</div>
+
+				</div>
+				<!--end of div.columns -->
+
+			</section>
+			<!--end of .primary-holder -->
+
+			<!-- interactive container -->
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+			<!-- end of interactive container -->
+		</div>
+
+	</div>
+	<!--end of .mainContainer -->
+
+	<section class="border-top has-default-focus is-hidden-interactive margin-top-sm ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+	<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+			<a
+				data-mscc-ic="false"
+				class="locale-selector-link button button-sm button-clear flex-shrink-0"
+				href="#"
+				data-bi-name="select-locale">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text"></span></a>
+		<div class="ccpa-privacy-link flex-shrink-0" hidden>
+<a
+	href="https://aka.ms/yourcaliforniaprivacychoices"
+	class="button button-sm button-clear"
+	data-mscc-ic="false"
+	data-bi-name="your-privacy-choices"
+>
+	<svg
+		role="img"
+		aria-label="California Consumer Privacy Act (CCPA) Opt-Out Icon"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 30 14"
+		xml:space="preserve"
+		height="16"
+		width="43"
+		focusable="false"
+	>
+		<title>California Consumer Privacy Act (CCPA) Opt-Out Icon</title>
+		<path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+		<path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+		<path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+		<path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+	</svg>
+	<span>Your Privacy Choices</span>
+</a>
+		</div>
+		<div class="flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+		<span class="icon expanded-indicator" aria-hidden="true">
+			<span class="docon docon-chevron-down-light"></span>
+		</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector padding-xxs" role="none">
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light margin-right-xxs">
+						<span
+							class="theme-selector-icon border display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Light					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark margin-right-xxs">
+						<span
+							class="border theme-selector-icon display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span
+							class="border theme-selector-icon display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/previous-versions/" data-bi-name="archivelink">Previous Versions</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog" data-bi-name="bloglink">Blog</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/contribute/" data-bi-name="contributorGuide">Contribute</a></li>
+					<li><a class="external-link-indicator" data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2024</li>
+	</ul>
+</footer>
+	</section>
+
+	<div id="action-panel" role="region" aria-label="Action Panel" class="action-panel has-default-focus" tabindex="-1"></div>
+</body>
+</html>
