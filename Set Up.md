@@ -1,5 +1,5 @@
 - [Git](https://git-scm.com/download/win)
-- [GitHub](https://desktop.github.com/)
+- [GitHub](https://desktop.github.com/) (optional)
 - [Drive](https://www.google.com/drive/download/)
 - [Python3](https://www.python.org/downloads/)
 - [VS Code](https://code.visualstudio.com/Download)  
